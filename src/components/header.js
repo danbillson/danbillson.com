@@ -4,17 +4,20 @@ import Link from 'next/link'
 export default function Header() {
   return (
     <Container>
-      <Link href="/media">
-        <Anchor>media</Anchor>
-      </Link>
       <Link href="/">
         <Logo>
           D<Long>anBillson</Long>
           <Highlight>.</Highlight>
         </Logo>
       </Link>
+      <Link href="/media">
+        <Anchor>media</Anchor>
+      </Link>
       <Link href="/cheer">
         <Anchor>cheer</Anchor>
+      </Link>
+      <Link href="/coffee">
+        <Anchor>coffee</Anchor>
       </Link>
     </Container>
   )
@@ -54,6 +57,8 @@ const Highlight = styled.span`
 `
 
 const Anchor = styled.a`
+  padding-right: 1.5rem;
+
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
