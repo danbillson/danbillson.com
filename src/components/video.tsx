@@ -1,6 +1,10 @@
 import YouTube from 'react-youtube'
 
-export default function Video({ video }) {
+type VideoProps = {
+  video: string
+}
+
+export default function Video({ video }: VideoProps) {
   const opts = {
     height: '390',
     width: '100%',

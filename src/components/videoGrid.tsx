@@ -1,8 +1,14 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 import Video from './video'
 
-export default function VideoGrid({ videos }) {
+type VideoGridProps = {
+  videos: {
+    video: string
+  }[]
+}
+
+export default function VideoGrid({ videos }: VideoGridProps) {
   return (
     <Grid>
       {videos.map(({ video }) => (

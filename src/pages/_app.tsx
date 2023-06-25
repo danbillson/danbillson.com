@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { normalize } from 'styled-normalize'
+import '@fontsource-variable/karla'
+import '@fontsource-variable/bodoni-moda'
 
 const GlobalStyle = createGlobalStyle`
-  ${normalize}
-
   html {
     font-family: Karla, sans-serif;
   }
@@ -36,8 +35,9 @@ export default function App({ Component, pageProps }) {
         <meta charSet="utf-8" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        {/* @ts-expect-error */}
+        <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
     </>

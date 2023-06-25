@@ -1,21 +1,15 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 import Link from 'next/link'
 
 export default function Header() {
   return (
     <Container>
-      <Link href="/media">
-        <Anchor>media</Anchor>
-      </Link>
-      <Link href="/">
-        <Logo>
-          D<Long>anBillson</Long>
-          <Highlight>.</Highlight>
-        </Logo>
-      </Link>
-      <Link href="/cheer">
-        <Anchor>cheer</Anchor>
-      </Link>
+      <Link href="/media">media</Link>
+      <Logo href="/">
+        D<Long>anBillson</Long>
+        <Highlight>.</Highlight>
+      </Logo>
+      <Link href="/cheer">cheer</Link>
     </Container>
   )
 }
@@ -35,7 +29,7 @@ const Container = styled.header`
   }
 `
 
-const Logo = styled.a`
+const Logo = styled(Link)`
   margin: 0 2rem;
   font-size: 2rem;
   font-weight: 700;
@@ -53,7 +47,7 @@ const Highlight = styled.span`
   color: ${({ theme }) => theme.colors.primary};
 `
 
-const Anchor = styled.a`
+const Anchor = styled(Link)`
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }

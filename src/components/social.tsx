@@ -1,8 +1,5 @@
-import styled from 'styled-components'
-import Github from '../public/github.svg'
-import Instagram from '../public/instagram.svg'
-import Linkedin from '../public/linkedin.svg'
-import Medium from '../public/medium.svg'
+import { styled } from 'styled-components'
+import { Github, Instagram, Linkedin, Megaphone } from 'lucide-react'
 
 const social = [
   {
@@ -18,7 +15,7 @@ const social = [
     link: `https://www.linkedin.com/in/danielbillson/`,
   },
   {
-    icon: <Medium />,
+    icon: <Megaphone />,
     link: `https://medium.com/@danielbillson`,
   },
 ]
@@ -35,13 +32,14 @@ export default function Social(props) {
   )
 }
 
-const Container = styled.div`
+const Container = styled.div<{ header?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
 
   a {
     margin: 20px;
+    color: white;
 
     &:first-child {
       margin-left: 0;
@@ -54,7 +52,6 @@ const Container = styled.div`
 
   svg {
     width: 30px;
-    fill: ${({ theme }) => theme.colors.bg};
     cursor: pointer;
   }
 

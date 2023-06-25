@@ -1,4 +1,10 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
+  reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
   webpack: function (config) {
     config.module.rules.push({
       test: /\.md$/,
@@ -7,3 +13,5 @@ module.exports = {
     return config
   },
 }
+
+module.exports = nextConfig

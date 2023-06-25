@@ -1,8 +1,13 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 import Box from './box'
 
-export default function Heading({ title, body }) {
+type HeadingProps = {
+  title: string
+  body: string
+}
+
+export default function Heading({ title, body }: HeadingProps) {
   return (
     <Box>
       <Content>

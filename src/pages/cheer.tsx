@@ -7,7 +7,15 @@ import VideoGrid from '../components/videoGrid'
 import Box from '../components/box'
 import Social from '../components/social'
 
-export default function Media({ archive, ...props }) {
+type MediaProps = {
+  title: string
+  body: string
+  archive: {
+    video: string
+  }[]
+}
+
+export default function Media({ archive, ...props }: MediaProps) {
   return (
     <div>
       <SEO title={props.title} description={props.body} />
@@ -22,6 +30,7 @@ export default function Media({ archive, ...props }) {
 }
 
 export async function getStaticProps() {
+  // @ts-ignore-next-line
   const cheer = await import('../data/cheer.md')
   const { data } = matter(cheer.default)
 

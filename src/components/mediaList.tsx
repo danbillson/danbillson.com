@@ -1,6 +1,11 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
-function MediaGroup({ title, children }) {
+type MediaGroupProps = {
+  title: string
+  children: React.ReactNode
+}
+
+function MediaGroup({ title, children }: MediaGroupProps) {
   return (
     <MediaSection>
       <MediaHeading>{title}</MediaHeading>
@@ -11,7 +16,19 @@ function MediaGroup({ title, children }) {
   )
 }
 
-export default function Media({ list }) {
+type MediaProps = {
+  list: {
+    [month: string]: {
+      [category: string]: {
+        title: string
+        info: string
+        emoji: string
+      }[]
+    }
+  }
+}
+
+export default function Media({ list }: MediaProps) {
   return (
     <Container>
       {Object.entries(list).map(([month, media]) => {
@@ -80,7 +97,7 @@ const MediaBody = styled.div`
   padding: 0.5rem;
 `
 
-const EmojiLi = styled.li`
+const EmojiLi = styled.li<{ emoji: string }>`
   margin: 0.5rem 0;
   padding-left: 0.5rem;
   list-style-type: '${({ emoji }) => emoji}';

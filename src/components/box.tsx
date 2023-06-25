@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
-export default styled.div`
+export default styled.div<{ large?: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;

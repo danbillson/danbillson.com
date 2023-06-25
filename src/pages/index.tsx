@@ -36,6 +36,7 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   const config = await import('../data/config.json')
+  // @ts-ignore-next-line
   const home = await import('../data/home.md')
   const { data } = matter(home.default)
 

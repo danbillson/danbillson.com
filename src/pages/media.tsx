@@ -7,7 +7,21 @@ import MediaList from '../components/mediaList'
 import Box from '../components/box'
 import Social from '../components/social'
 
-export default function Media({ list, ...props }) {
+type MediaProps = {
+  title: string
+  body: string
+  list: {
+    [month: string]: {
+      [category: string]: {
+        title: string
+        info: string
+        emoji: string
+      }[]
+    }
+  }
+}
+
+export default function Media({ list, ...props }: MediaProps) {
   return (
     <div>
       <SEO title={props.title} description={props.body} />
@@ -22,6 +36,7 @@ export default function Media({ list, ...props }) {
 }
 
 export async function getStaticProps() {
+  // @ts-ignore-next-line
   const media = await import('../data/media.md')
   const { data } = matter(media.default)
 
