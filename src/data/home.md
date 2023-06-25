@@ -2,6 +2,15 @@
 title: Hi I'm Dan
 tagline: I’m a software engineer based in the North East.
 image: /code.png
+projects:
+  - title: pouring.at
+    body: An app for finding your favourite beers that are currently pouring at bars around the UK
+    github: https://github.com/danbillson/pouring-at
+    link: https://pouring.at
+  - title: Office hours
+    body: A small app for booking in time slots to go into the office
+    github: https://github.com/danbillson/office-hours
+    link: https://climb-office-hours.vercel.app/
 professional:
   - name: SoPost
     year: 2021 - Present

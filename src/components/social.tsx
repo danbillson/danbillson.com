@@ -39,7 +39,7 @@ const Container = styled.div<{ header?: boolean }>`
 
   a {
     margin: 20px;
-    color: white;
+    color: ${({ theme }) => theme.colors.bg};
 
     &:first-child {
       margin-left: 0;

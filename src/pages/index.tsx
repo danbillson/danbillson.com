@@ -8,20 +8,29 @@ import Event from '../components/event'
 import Preview from '../components/preview'
 import Box from '../components/box'
 import Social from '../components/social'
+import Project from '../components/project'
 
 export default function Home(props) {
-  const { seo, professional, blog } = props
+  const { seo, projects, professional, blog } = props
 
   return (
     <div>
       <SEO {...seo} />
       <Header />
       <Hero {...props} />
+
+      <Grid title="Projects">
+        {projects.map((project) => (
+          <Project key={project.title} {...project} />
+        ))}
+      </Grid>
+
       <Grid title="Professional">
         {professional.map((job) => (
           <Event key={job.name} {...job} />
         ))}
       </Grid>
+
       <Box>
         <Grid title="Blog">
           {blog.map((preview) => (
