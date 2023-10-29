@@ -1,5 +1,5 @@
-import { styled } from 'styled-components'
-import { Github, ExternalLink } from 'lucide-react'
+import { styled } from "styled-components";
+import { Github, ExternalLink } from "lucide-react";
 
 export default function Project({ title, body, link, github }) {
   return (
@@ -17,21 +17,21 @@ export default function Project({ title, body, link, github }) {
       </Heading>
       <Body>{body}</Body>
     </div>
-  )
+  );
 }
 
 const Title = styled.h4`
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: 'Bodoni Moda', serif;
-`
+  font-family: var(--font-heading);
+`;
 
 const Body = styled.p`
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-`
+`;
 
 const Heading = styled.div`
   display: flex;
@@ -41,9 +41,9 @@ const Heading = styled.div`
   a {
     color: ${({ theme }) => theme.colors.fg};
   }
-`
+`;
 
 const Links = styled.div`
   display: flex;
   gap: 1rem;
-`
+`;

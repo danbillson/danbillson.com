@@ -1,7 +1,7 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components";
 
-import Box from './box'
-import Social from '../components/social'
+import Box from "./box";
+import Social from "../components/social";
 
 export default function Hero({ title, tagline, image }) {
   return (
@@ -15,7 +15,7 @@ export default function Hero({ title, tagline, image }) {
         <img src={image} alt="Coding" />
       </Content>
     </Box>
-  )
+  );
 }
 
 const Content = styled.div`
@@ -39,14 +39,14 @@ const Content = styled.div`
       display: block;
     }
   }
-`
+`;
 
 const Title = styled.h1`
   margin-top: 0;
   font-size: 3rem;
-  font-family: 'Bodoni Moda', serif;
-`
+  font-family: var(--font-heading);
+`;
 
 const Tagline = styled.p`
   max-width: 395px;
-`
+`;
