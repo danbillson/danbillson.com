@@ -1,9 +1,9 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components";
 
 type MediaGroupProps = {
-  title: string
-  children: React.ReactNode
-}
+  title: string;
+  children: React.ReactNode;
+};
 
 function MediaGroup({ title, children }: MediaGroupProps) {
   return (
@@ -13,20 +13,20 @@ function MediaGroup({ title, children }: MediaGroupProps) {
         <ul>{children}</ul>
       </MediaBody>
     </MediaSection>
-  )
+  );
 }
 
 type MediaProps = {
   list: {
     [month: string]: {
       [category: string]: {
-        title: string
-        info: string
-        emoji: string
-      }[]
-    }
-  }
-}
+        title: string;
+        info: string;
+        emoji: string;
+      }[];
+    };
+  };
+};
 
 export default function Media({ list }: MediaProps) {
   return (
@@ -47,17 +47,17 @@ export default function Media({ list }: MediaProps) {
               ))}
             </MediaGrid>
           </MediaWrapper>
-        )
+        );
       })}
     </Container>
-  )
+  );
 }
 
 const Container = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 1024px;
-`
+`;
 
 const MediaWrapper = styled.div`
   padding: 2rem 0;
@@ -67,7 +67,7 @@ const MediaWrapper = styled.div`
     margin: 0;
     padding: 0.5rem 1rem;
   }
-`
+`;
 
 const MediaGrid = styled.div`
   display: grid;
@@ -77,13 +77,13 @@ const MediaGrid = styled.div`
   @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
-`
+`;
 
 const MediaHeading = styled.div`
   padding: 0.5rem;
   background-color: ${({ theme }) => theme.colors.secondary};
   color: #fff;
-`
+`;
 
 const MediaSection = styled.div`
   &:nth-child(2) {
@@ -91,19 +91,19 @@ const MediaSection = styled.div`
       background-color: ${({ theme }) => theme.colors.tertiary};
     }
   }
-`
+`;
 
 const MediaBody = styled.div`
   padding: 0.5rem;
-`
+`;
 
 const EmojiLi = styled.li<{ emoji: string }>`
   margin: 0.5rem 0;
   padding-left: 0.5rem;
-  list-style-type: '${({ emoji }) => emoji}';
-`
+  list-style-type: "${({ emoji }) => emoji}";
+`;
 
 const Info = styled.span`
   color: #a0a29d;
   font-size: 0.8rem;
-`
+`;
