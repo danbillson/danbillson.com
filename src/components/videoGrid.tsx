@@ -1,12 +1,12 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components";
 
-import Video from './video'
+import Video from "./video";
 
 type VideoGridProps = {
   videos: {
-    video: string
-  }[]
-}
+    video: string;
+  }[];
+};
 
 export default function VideoGrid({ videos }: VideoGridProps) {
   return (
@@ -15,7 +15,7 @@ export default function VideoGrid({ videos }: VideoGridProps) {
         <Video key={video} video={video} />
       ))}
     </Grid>
-  )
+  );
 }
 
 const Grid = styled.div`
@@ -29,4 +29,4 @@ const Grid = styled.div`
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-`
+`;

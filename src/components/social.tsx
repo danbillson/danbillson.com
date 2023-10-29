@@ -1,5 +1,5 @@
-import { styled } from 'styled-components'
-import { Github, Instagram, Linkedin, Megaphone } from 'lucide-react'
+import { styled } from "styled-components";
+import { Github, Instagram, Linkedin, Megaphone } from "lucide-react";
 
 const social = [
   {
@@ -18,7 +18,7 @@ const social = [
     icon: <Megaphone />,
     link: `https://medium.com/@danielbillson`,
   },
-]
+];
 
 export default function Social(props) {
   return (
@@ -29,7 +29,7 @@ export default function Social(props) {
         </a>
       ))}
     </Container>
-  )
+  );
 }
 
 const Container = styled.div<{ header?: boolean }>`
@@ -62,4 +62,4 @@ const Container = styled.div<{ header?: boolean }>`
       width: 40px;
     }
   }
-`
+`;

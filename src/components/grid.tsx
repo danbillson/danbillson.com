@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components";
 
 export default function Grid({ title, children }) {
   return (
@@ -6,7 +6,7 @@ export default function Grid({ title, children }) {
       <h3>{title}</h3>
       <Items>{children}</Items>
     </Container>
-  )
+  );
 }
 
 const Container = styled.div`
@@ -17,7 +17,7 @@ const Container = styled.div`
   h3 {
     font-size: 2rem;
   }
-`
+`;
 
 const Items = styled.div`
   display: grid;
@@ -27,4 +27,4 @@ const Items = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem 5rem;
   }
-`
+`;

@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function SEO({ title, description }) {
   return (
@@ -8,5 +8,5 @@ export default function SEO({ title, description }) {
       <meta property="og:description" content={description} key="ogdesc" />
       <title>{title}</title>
     </Head>
-  )
+  );
 }

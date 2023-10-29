@@ -1,17 +1,17 @@
-import matter from 'gray-matter'
+import matter from "gray-matter";
 
-import SEO from '../components/seo'
-import Header from '../components/header'
-import Hero from '../components/hero'
-import Grid from '../components/grid'
-import Event from '../components/event'
-import Preview from '../components/preview'
-import Box from '../components/box'
-import Social from '../components/social'
-import Project from '../components/project'
+import SEO from "../components/seo";
+import Header from "../components/header";
+import Hero from "../components/hero";
+import Grid from "../components/grid";
+import Event from "../components/event";
+import Preview from "../components/preview";
+import Box from "../components/box";
+import Social from "../components/social";
+import Project from "../components/project";
 
 export default function Home(props) {
-  const { seo, projects, professional, blog } = props
+  const { seo, projects, professional, blog } = props;
 
   return (
     <div>
@@ -40,14 +40,14 @@ export default function Home(props) {
         <Social />
       </Box>
     </div>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const config = await import('../data/config.json')
+  const config = await import("../data/config.json");
   // @ts-ignore-next-line
-  const home = await import('../data/home.md')
-  const { data } = matter(home.default)
+  const home = await import("../data/home.md");
+  const { data } = matter(home.default);
 
   return {
     props: {
@@ -57,5 +57,5 @@ export async function getStaticProps() {
       },
       ...data,
     },
-  }
+  };
 }

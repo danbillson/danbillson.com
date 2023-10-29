@@ -1,5 +1,5 @@
-import { styled } from 'styled-components'
-import Link from 'next/link'
+import { styled } from "styled-components";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -11,7 +11,7 @@ export default function Header() {
       </Logo>
       <Link href="/cheer">cheer</Link>
     </Container>
-  )
+  );
 }
 
 const Container = styled.header`
@@ -27,13 +27,13 @@ const Container = styled.header`
     cursor: pointer;
     transition: color 0.23s ease-in-out;
   }
-`
+`;
 
 const Logo = styled(Link)`
   margin: 0 2rem;
   font-size: 2rem;
   font-weight: 700;
-`
+`;
 
 const Long = styled.span`
   display: none;
@@ -41,14 +41,14 @@ const Long = styled.span`
   @media screen and (min-width: 768px) {
     display: inline;
   }
-`
+`;
 
 const Highlight = styled.span`
   color: ${({ theme }) => theme.colors.primary};
-`
+`;
 
 const Anchor = styled(Link)`
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
-`
+`;

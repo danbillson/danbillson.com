@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components";
 
 export default styled.div<{ large?: boolean }>`
   display: flex;
@@ -18,7 +18,7 @@ export default styled.div<{ large?: boolean }>`
           height: 80vh;
         }
       `
-      : ''}
+      : ""}
 
   @media screen and (min-width: 768px) {
     width: calc(100% - 2rem);
@@ -26,4 +26,4 @@ export default styled.div<{ large?: boolean }>`
     padding: 0;
     border-radius: 1.5rem;
   }
-`
+`;
