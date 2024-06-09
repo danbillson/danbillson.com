@@ -1,0 +1,38 @@
+import { Github, Instagram, Linkedin, Megaphone } from "lucide-react";
+import { siGithub, siInstagram, siLinkedin, siMedium } from "simple-icons";
+
+const social = [
+  {
+    icon: siGithub.svg,
+    link: `https://github.com/danbillson`,
+  },
+  {
+    icon: siInstagram.svg,
+    link: `https://www.instagram.com/danbillson/`,
+  },
+  {
+    icon: siLinkedin.svg,
+    link: `https://www.linkedin.com/in/danielbillson/`,
+  },
+  {
+    icon: siMedium.svg,
+    link: `https://medium.com/@danielbillson`,
+  },
+];
+
+export default function Social() {
+  return (
+    <div className="flex justify-center m-6 gap-3 mt-12">
+      {social.map(({ icon, link }) => (
+        <a
+          key={link}
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          dangerouslySetInnerHTML={{ __html: icon }}
+          className="w-6 h-6 mx-2"
+        />
+      ))}
+    </div>
+  );
+}
