@@ -1,13 +1,38 @@
 import "./globals.css";
+import Nav from "@/components/nav";
+import Social from "@/components/social";
 import { cn } from "@/lib/utils";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dan Billson",
+  title: {
+    default: "Dan Billson",
+    template: "%s | Dan Billson",
+  },
   description:
     "Software engineer, volleyball player and craft beer enthusiast.",
+  openGraph: {
+    title: "Dan Billson",
+    description:
+      "Software engineer, volleyball player and craft beer enthusiast.",
+    url: "https://danbillson.com",
+    siteName: "Dan Billson",
+    locale: "en_GB",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -24,7 +49,11 @@ export default function RootLayout({
           GeistMono.variable,
         )}
       >
-        {children}
+        <main className="mt-6 p-6 max-w-2xl mx-auto">
+          <Nav />
+          {children}
+          <Social />
+        </main>
       </body>
     </html>
   );
