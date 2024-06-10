@@ -28,9 +28,9 @@ export default function Projects() {
           brewery or beer style.
         </p>
         <ul>
-          <li>Next.js, Tailwind CSS and shadcn/ui for the front end</li>
-          <li>Drizzle, tRPC and Planetscale for the back end</li>
-          <li>Clerk for authentication and Upstash for rate limiting</li>
+          <li>Next.js, Tailwind CSS and shadcn/ui for the front end.</li>
+          <li>Drizzle, tRPC and Planetscale for the back end.</li>
+          <li>Clerk for authentication and Upstash for rate limiting.</li>
         </ul>
 
         <hr className="my-6 border-neutral-100" />
@@ -52,7 +52,7 @@ export default function Projects() {
           <a href="https://github.com/pmndrs/jotai">Jotai</a> and{" "}
           <a href="https://github.com/pmndrs/zustand">Zustand</a> as state
           management libraries which would later help decide the direction for
-          how we managed state in one of the apps at SoPost
+          how we managed state in one of the apps at SoPost.
         </p>
 
         <hr className="my-6 border-neutral-100" />
@@ -65,7 +65,7 @@ export default function Projects() {
           Not really a project but my latest and best attempt at Advent of Code,
           previous years I tried with Elixir and Rust which were definitely out
           of my comfort zone but in 2023 I managed to get through to day 20 with
-          TypeScript
+          TypeScript.
         </p>
       </div>
     </section>
