@@ -1,4 +1,3 @@
-import { Github, Instagram, Linkedin, Megaphone } from "lucide-react";
 import { siGithub, siInstagram, siLinkedin, siMedium } from "simple-icons";
 
 const social = [
