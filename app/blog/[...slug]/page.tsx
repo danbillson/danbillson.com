@@ -1,4 +1,6 @@
+import { Mdx } from "@/components/mdx-components";
 import { formatDate } from "@/lib/utils";
+import "@/styles/mdx.css";
 import { allPosts } from "contentlayer/generated";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -48,10 +50,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
         </time>
         <h1 className="text-3xl font-medium">{post.title}</h1>
       </div>
-      <div
-        className="[&>*]:mb-3 [&>*:last-child]:mb-0"
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      />
+      <Mdx code={post.body.code} />
     </article>
   );
 }
