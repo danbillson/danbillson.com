@@ -4,9 +4,8 @@ import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
+import { Karla as FontSans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: {
@@ -37,6 +36,12 @@ export const metadata: Metadata = {
   },
 };
 
+const fontSans = FontSans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-sans",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,8 +52,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          GeistSans.variable,
-          GeistMono.variable,
+          fontSans.variable,
         )}
       >
         <main className="mt-6 p-6 max-w-2xl mx-auto">
