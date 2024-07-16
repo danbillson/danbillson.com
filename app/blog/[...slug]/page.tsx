@@ -29,7 +29,24 @@ export async function generateMetadata({
     return {};
   }
 
-  return { title: post.title, description: post.description };
+  const { title, date: publishedTime, description } = post;
+
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      publishedTime,
+      url: `https://danbillson.com/blog/${post.slug}`,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+  };
 }
 
 export const generateStaticParams = async () =>
