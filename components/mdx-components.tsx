@@ -1,4 +1,5 @@
 import { Callout } from "@/components/callout";
+import { InfoLinks } from "@/components/info-links";
 import { MdxCard } from "@/components/mdx-card";
 import { cn } from "@/lib/utils";
 import { useMDXComponent } from "next-contentlayer/hooks";
@@ -158,6 +159,7 @@ const components = {
   Image,
   Callout,
   Card: MdxCard,
+  InfoLinks: InfoLinks,
 };
 
 interface MdxProps {
