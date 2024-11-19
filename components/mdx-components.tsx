@@ -156,7 +156,9 @@ const components = {
       {...props}
     />
   ),
-  Image,
+  Image: ({ className, ...props }: React.ComponentProps<typeof Image>) => (
+    <Image className={cn("rounded-lg", className)} {...props} alt={props.alt} />
+  ),
   Callout,
   Card: MdxCard,
   InfoLinks: InfoLinks,
