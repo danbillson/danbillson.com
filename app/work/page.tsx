@@ -19,8 +19,30 @@ export default function Work() {
         </p>
 
         <hr className="my-6 border-neutral-100" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">SoPost</h2>
-        <p className="text-neutral-600 text-sm">Senior Software Engineer</p>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <a href="https://www.paddle.com">Paddle</a>
+        </h2>
+        <p className="text-neutral-600 text-sm">Software Engineer, current</p>
+        <p>
+          After a move to London, I joined the Developer Experience team at
+          Paddle where I lead the homepage refresh project for our{" "}
+          <a href="https://developer.paddle.com/">developer docs</a>. I work
+          closely with our open source projects including the{" "}
+          <a href="https://github.com/PaddleHQ/paddle-node-sdk">node sdk</a>,{" "}
+          <a href="https://github.com/PaddleHQ/paddle-js-v2">paddle.js</a> and
+          the{" "}
+          <a href="https://github.com/PaddleHQ/paddle-nextjs-starter-kit">
+            next.js starter kit
+          </a>
+        </p>
+
+        <hr className="my-6 border-neutral-100" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <a href="https://sopost.com">SoPost</a>
+        </h2>
+        <p className="text-neutral-600 text-sm">
+          Senior Software Engineer, 2021 - 2024
+        </p>
         <p>
           I joined <a href="https://sopost.com">SoPost</a> in 2021 as a Software
           Engineer as part of the Platform team helping build out the core
@@ -47,48 +69,51 @@ export default function Work() {
 
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
-          Climb Creative
+          <a href="https://precisionproco.co.uk/">Climb Creative</a>
         </h2>
         <p className="text-neutral-600 text-sm">
           Front-end developer, 2020 - 2021
         </p>
         <p>
           After moving back up north, I joined another small dev team at Climb
-          Creative who are part of the Precision Proco Group, a huge part of
-          printing across the country. With this new line of business came lots
-          of new challenges and exciting projects to work on all with a very
-          hands on approach.
+          Creative, part of the Precision Proco Group - a major player in the UK
+          printing industry. These new challenges brought exciting projects
+          requiring a hands-on approach.
         </p>
         <p>
-          I worked primarlily on <a href="https://wttb.co.uk/">WTTB</a> and led
-          the rebuild of the product page and checkout flow as well as the Canva
-          integration to design your own products.
+          I primarily worked on <a href="https://wttb.co.uk/">WTTB</a>, leading
+          the rebuild of the product page and checkout flow, as well as
+          implementing the Canva integration for custom product design.
         </p>
 
         <hr className="my-6 border-neutral-100" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Marmalade</h2>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <a href="https://www.wearemarmalade.co.uk/">Marmalade</a>
+        </h2>
         <p className="text-neutral-600 text-sm">
           Front-end developer, 2019 - 2020
         </p>
         <p>
-          Contrary to The Hut Group, Marmalade has a much smaller dev team
-          meaning that there is much more room for advancing technologies,
-          impactful changes and responsibility. As a team we have worked with
-          Gatsby, Lerna monorepos and the latest in React.
+          At Marmalade, I worked with a compact but dynamic dev team that
+          offered greater scope for technological advancement and impactful
+          changes. Working with cutting-edge technologies like Gatsby, Lerna
+          monorepos, and the latest React features,
         </p>
         <p>
           I built the{" "}
           <a href="https://www.wearemarmalade.co.uk/driver-hub">
             Driver Hub Blog
-          </a>{" "}
-          with Gastby and headless Drupal and worked with aggregators such as
-          Moneysupermarket and Compare the Market to create automated scripts
-          with puppeteer that could run over 100 quotes concurrently to test the
-          integrations.
+          </a>
+          using Gatsby and headless Drupal. I also developed automated testing
+          scripts using puppeteer to run concurrent quote checks across
+          aggregators like Moneysupermarket and Compare the Market, testing over
+          100 quotes simultaneously.
         </p>
 
         <hr className="my-6 border-neutral-100" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">THG</h2>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <a href="https://www.thg.com/">THG</a>
+        </h2>
         <p className="text-neutral-600 text-sm">
           Graduate Front-end developer, 2018
         </p>
