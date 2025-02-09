@@ -20,6 +20,29 @@ export default function Projects() {
 
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <a href="https://github.com/danbillson/advent-of-code-2023">
+            Advent of Code 2024
+          </a>
+        </h2>
+        <p>
+          Another year of Advent of Code using Bun and TypeScript where I&apos;m
+          able to explore interesting concepts like{" "}
+          <a href="https://github.com/danbillson/advent-of-code-2024/blob/main/src/16/index.ts#L31">
+            Dijkstra&apos;s
+          </a>
+          ,{" "}
+          <a href="https://github.com/danbillson/advent-of-code-2024/blob/main/src/06/index.ts#L27">
+            flood fill
+          </a>{" "}
+          and{" "}
+          <a href="https://github.com/danbillson/advent-of-code-2024/blob/main/src/11/index.ts#L23">
+            performant recursion
+          </a>
+          .
+        </p>
+
+        <hr className="my-6 border-neutral-100" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
           <a href="https://github.com/danbillson/pouring-at">pouring.at</a>
         </h2>
         <p>
