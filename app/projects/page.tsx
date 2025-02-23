@@ -20,6 +20,24 @@ export default function Projects() {
 
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <a href="https://github.com/danbillson/next-forge-paddle">
+            next-forge-paddle
+          </a>
+        </h2>
+        <p>
+          A fork of{" "}
+          <a href="https://github.com/haydenbleasel/next-forge">next-forge</a>,
+          a &quot;Production-grade Turborepo template for Next.js apps&quot;
+          with Paddle Billing for payments and billing.
+          <br /> Read the{" "}
+          <a href="https://docs.next-forge.com/migrations/payments/paddle">
+            migration guide
+          </a>{" "}
+          to learn how to migrate a next-forge project to use Paddle.
+        </p>
+
+        <hr className="my-6 border-neutral-100" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
           <a href="https://github.com/danbillson/advent-of-code-2023">
             Advent of Code 2024
           </a>
