@@ -1,11 +1,10 @@
 import Gallery from "@/components/gallery";
+import { Title } from "@/components/title";
 
 export default function Home() {
   return (
     <section>
-      <h1 className="font-medium text-2xl mt-14 mb-8 tracking-tighter">
-        hey, i&apos;m dan 👋
-      </h1>
+      <Title />
       <div className="prose prose-neutral">
         <p>
           I&apos;m a software engineer, currently based in London. I was a
@@ -20,7 +19,7 @@ export default function Home() {
           <a
             href="https://www.youtube.com/watch?v=4VmvaqKoGTY"
             target="_blank"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
           >
             Team England 2019
           </a>
