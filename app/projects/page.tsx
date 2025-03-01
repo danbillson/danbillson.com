@@ -61,7 +61,7 @@ export default function Projects() {
 
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
-          <a href="https://github.com/danbillson/pouring-at">pouring.at</a>
+          <a href="https://github.com/danbillson/t3-pouring-at">pouring.at</a>
         </h2>
         <p>
           An app for craft bars and breweries to list what they are serving on
