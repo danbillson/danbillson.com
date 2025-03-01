@@ -1,3 +1,4 @@
+import { CVTitle } from "./cv-title";
 import { Callout } from "@/components/callout";
 import { InfoLinks } from "@/components/info-links";
 import { MdxCard } from "@/components/mdx-card";
@@ -162,6 +163,7 @@ const components = {
   Callout,
   Card: MdxCard,
   InfoLinks: InfoLinks,
+  CVTitle: CVTitle,
 };
 
 interface MdxProps {
