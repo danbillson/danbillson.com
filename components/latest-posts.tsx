@@ -1,5 +1,6 @@
 "use client";
 
+import { Section } from "./ui/section";
 import { AnimatedBackground } from "@/components/ui/animated-background";
 import type { Post } from "contentlayer/generated";
 import Link from "next/link";
@@ -10,7 +11,7 @@ type LatestPostsProps = {
 
 export function LatestPosts({ posts }: LatestPostsProps) {
   return (
-    <section className="mt-10">
+    <Section className="mt-10">
       <h3 className="mb-3 text-lg font-medium">Latest Posts</h3>
       <div className="flex flex-col space-y-0">
         <AnimatedBackground
@@ -31,12 +32,12 @@ export function LatestPosts({ posts }: LatestPostsProps) {
             >
               <div className="flex flex-col space-y-1">
                 <h4 className="font-normal">{post.title}</h4>
-                <p className="text-zinc-500">{post.description}</p>
+                <p className="text-muted-foreground">{post.description}</p>
               </div>
             </Link>
           ))}
         </AnimatedBackground>
       </div>
-    </section>
+    </Section>
   );
 }
