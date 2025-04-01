@@ -9,6 +9,11 @@ import { InView } from "@/components/ui/in-view";
 import { motion } from "motion/react";
 import Image from "next/image";
 
+const variants = {
+  hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+  visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+} as const;
+
 export default function Gallery() {
   return (
     <InView
@@ -24,92 +29,60 @@ export default function Gallery() {
       }}
     >
       <div className="mt-6 grid grid-cols-2 gap-3">
-        <motion.div
-          className="row-span-3"
-          variants={{
-            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
-            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
-          }}
-        >
-          <Image
-            src={beerFest}
-            alt="Dan at a beer festival"
-            width={500}
-            height={675}
-            className="rounded-lg"
-            placeholder="blur"
-            priority
-          />
-        </motion.div>
-        <motion.div
-          className="row-span-2"
-          variants={{
-            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
-            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
-          }}
-        >
-          <Image
-            src={spw}
-            alt="Dan at SoPost week"
-            width={500}
-            height={500}
-            className="rounded-lg"
-            placeholder="blur"
-            priority
-          />
-        </motion.div>
-        <motion.div
-          className="row-span-3"
-          variants={{
-            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
-            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
-          }}
-        >
-          <Image
-            src={cupie}
-            alt="Dan doing a partner stunt"
-            width={500}
-            height={675}
-            className="rounded-lg"
-            placeholder="blur"
-            priority
-          />
-        </motion.div>
-        <motion.div
-          className="row-span-2"
-          variants={{
-            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
-            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
-          }}
-        >
-          <Image
-            src={balcony}
-            alt="Dan on a balcony smiling"
-            width={500}
-            height={675}
-            className="rounded-lg"
-            placeholder="blur"
-            priority
-          />
-        </motion.div>
-        <motion.div
-          className="col-span-2"
-          variants={{
-            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
-            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
-          }}
-        >
-          <Image
-            src={te}
-            alt="Team England Cheer"
-            width={740}
-            height={500}
-            className="rounded-lg"
-            placeholder="blur"
-            priority
-          />
-        </motion.div>
+        {images.map((image) => (
+          <motion.div
+            key={image.alt}
+            className={image.className}
+            variants={variants}
+          >
+            {/* eslint-disable-next-line jsx-a11y/alt-text */}
+            <Image
+              {...image}
+              className="rounded-lg"
+              placeholder="blur"
+              priority
+            />
+          </motion.div>
+        ))}
       </div>
     </InView>
   );
 }
+
+const images = [
+  {
+    src: beerFest,
+    alt: "Dan at a beer festival",
+    width: 500,
+    height: 675,
+    className: "row-span-3",
+  },
+  {
+    src: spw,
+    alt: "Dan at SoPost week",
+    width: 500,
+    height: 500,
+    className: "row-span-2",
+  },
+  {
+    src: cupie,
+    alt: "Dan doing a partner stunt",
+    width: 500,
+    height: 675,
+    className: "row-span-3",
+  },
+  {
+    src: balcony,
+    alt: "Dan on a balcony smiling",
+    width: 500,
+    height: 675,
+    className: "row-span-2",
+  },
+  {
+    src: te,
+    alt: "Team England Cheer",
+    width: 740,
+    height: 500,
+    className: "col-span-2",
+  },
+] as const;
