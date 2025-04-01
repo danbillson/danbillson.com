@@ -1,7 +1,14 @@
 import Gallery from "@/components/gallery";
+import { LatestPosts } from "@/components/latest-posts";
 import { Title } from "@/components/title";
+import { allPosts } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
 
 export default function Home() {
+  const latestPosts = allPosts
+    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+    .slice(0, 3);
+
   return (
     <section>
       <Title />
@@ -26,6 +33,7 @@ export default function Home() {
           . That was a fun one.
         </p>
       </div>
+      <LatestPosts posts={latestPosts} />
     </section>
   );
 }
