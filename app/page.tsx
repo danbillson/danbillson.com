@@ -1,5 +1,6 @@
 import Gallery from "@/components/gallery";
 import { LatestPosts } from "@/components/latest-posts";
+import { Section } from "@/components/section";
 import { Title } from "@/components/title";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
@@ -10,15 +11,17 @@ export default function Home() {
     .slice(0, 3);
 
   return (
-    <section>
+    <>
       <Title />
-      <div className="prose prose-neutral">
-        <p>
-          I&apos;m a software engineer, currently based in London. I was a
-          cheerleader on Team England but have now moved over to volleyball,
-          I&apos;m also a big fan of craft beer and coffee.
-        </p>
-      </div>
+      <Section>
+        <div className="prose prose-neutral">
+          <p>
+            I&apos;m a software engineer, currently based in London. I was a
+            cheerleader on Team England but have now moved over to volleyball,
+            I&apos;m also a big fan of craft beer and coffee.
+          </p>
+        </div>
+      </Section>
       <Gallery />
       <div className="prose prose-neutral mt-10">
         <p>
@@ -34,6 +37,6 @@ export default function Home() {
         </p>
       </div>
       <LatestPosts posts={latestPosts} />
-    </section>
+    </>
   );
 }

@@ -1,58 +1,115 @@
+"use client";
+
 import balcony from "../public/balcony.jpg";
 import beerFest from "../public/beer-fest.jpg";
 import cupie from "../public/cupie.jpg";
 import spw from "../public/spw.jpg";
 import te from "../public/te.jpg";
+import { InView } from "@/components/ui/in-view";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 export default function Gallery() {
   return (
-    <div className="grid mt-6 grid-cols-2 gap-3">
-      <Image
-        src={beerFest}
-        alt="Dan at a beer festival"
-        width={500}
-        height={675}
-        className="rounded-lg row-span-3"
-        placeholder="blur"
-        priority
-      />
-      <Image
-        src={spw}
-        alt="Dan at SoPost week"
-        width={500}
-        height={500}
-        className="rounded-lg row-span-2"
-        placeholder="blur"
-        priority
-      />
-      <Image
-        src={cupie}
-        alt="Dan doing a partner stunt"
-        width={500}
-        height={675}
-        className="rounded-lg row-span-3"
-        placeholder="blur"
-        priority
-      />
-      <Image
-        src={balcony}
-        alt="Dan on a balcony smiling"
-        width={500}
-        height={675}
-        className="rounded-lg row-span-2"
-        placeholder="blur"
-        priority
-      />
-      <Image
-        src={te}
-        alt="Team England Cheer"
-        width={740}
-        height={500}
-        className="rounded-lg col-span-2"
-        placeholder="blur"
-        priority
-      />
-    </div>
+    <InView
+      viewOptions={{ once: true, margin: "0px 0px -250px 0px" }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.09,
+          },
+        },
+      }}
+    >
+      <div className="mt-6 grid grid-cols-2 gap-3">
+        <motion.div
+          className="row-span-3"
+          variants={{
+            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+          }}
+        >
+          <Image
+            src={beerFest}
+            alt="Dan at a beer festival"
+            width={500}
+            height={675}
+            className="rounded-lg"
+            placeholder="blur"
+            priority
+          />
+        </motion.div>
+        <motion.div
+          className="row-span-2"
+          variants={{
+            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+          }}
+        >
+          <Image
+            src={spw}
+            alt="Dan at SoPost week"
+            width={500}
+            height={500}
+            className="rounded-lg"
+            placeholder="blur"
+            priority
+          />
+        </motion.div>
+        <motion.div
+          className="row-span-3"
+          variants={{
+            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+          }}
+        >
+          <Image
+            src={cupie}
+            alt="Dan doing a partner stunt"
+            width={500}
+            height={675}
+            className="rounded-lg"
+            placeholder="blur"
+            priority
+          />
+        </motion.div>
+        <motion.div
+          className="row-span-2"
+          variants={{
+            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+          }}
+        >
+          <Image
+            src={balcony}
+            alt="Dan on a balcony smiling"
+            width={500}
+            height={675}
+            className="rounded-lg"
+            placeholder="blur"
+            priority
+          />
+        </motion.div>
+        <motion.div
+          className="col-span-2"
+          variants={{
+            hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+            visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+          }}
+        >
+          <Image
+            src={te}
+            alt="Team England Cheer"
+            width={740}
+            height={500}
+            className="rounded-lg"
+            placeholder="blur"
+            priority
+          />
+        </motion.div>
+      </div>
+    </InView>
   );
 }
