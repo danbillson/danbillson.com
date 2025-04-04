@@ -12,7 +12,7 @@ const social = [
   },
   {
     icon: siX.svg,
-    link: `https://x.com/danbillson_`,
+    link: `https://x.com/dbillson`,
   },
   {
     icon: siLinkedin.svg,
