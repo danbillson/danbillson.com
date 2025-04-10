@@ -20,17 +20,6 @@ export default function Projects() {
 
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
-          <a href="https://github.com/danbillson/pourcast">pourcast</a>
-        </h2>
-        <p>
-          Pourcast is a proof of concept cocktail recommendation app that helps
-          you discover cocktail recipes based on the ingredients you have at
-          home. Using cursor as the work horse, I was able to build the app in
-          an evening.
-        </p>
-
-        <hr className="my-6 border-neutral-100" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">
           <a href="https://github.com/danbillson/next-forge-paddle">
             next-forge-paddle
           </a>
