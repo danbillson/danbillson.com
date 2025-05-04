@@ -4,19 +4,19 @@ My personal portfolio and blog built with Next.js, React, TypeScript, and Tailwi
 
 ## Features
 
-🎨 **Portfolio** - Showcase of my work, skills, and experiences
-📝 **Blog** - Articles about software engineering, tech, and personal interests
-📄 **CV** - Professional background and experience
-💻 **Projects** - Highlights of my development projects
-📦 **Content Management** - Uses ContentLayer for MDX content
+- 🎨 **Portfolio**: Showcase of my work, skills, and experiences
+- 📝 **Blog**: Articles about software engineering, tech, and personal interests
+- 📄 **CV**: Professional background and experience
+- 💻 **Projects**: Highlights of my development projects
+- 📦 **Content Management**: Uses ContentLayer for MDX content
 
 ## Tech Stack
 
-⚡ **Framework**: Next.js
-🔷 **Language**: TypeScript
-🎨 **Styling**: Tailwind CSS
-📝 **Content**: ContentLayer with MDX
-🚀 **Deployment**: Vercel
+- ⚡ **Framework**: Next.js
+- 🔷 **Language**: TypeScript
+- 🎨 **Styling**: Tailwind CSS
+- 📝 **Content**: ContentLayer with MDX
+- 🚀 **Deployment**: Vercel
 
 ## Getting Started
 
