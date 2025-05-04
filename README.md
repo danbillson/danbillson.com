@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# danbillson.com
+
+My personal portfolio and blog built with Next.js, React, TypeScript, and Tailwind CSS.
+
+## Features
+
+🎨 **Portfolio** - Showcase of my work, skills, and experiences
+📝 **Blog** - Articles about software engineering, tech, and personal interests
+📄 **CV** - Professional background and experience
+💻 **Projects** - Highlights of my development projects
+📦 **Content Management** - Uses ContentLayer for MDX content
+
+## Tech Stack
+
+⚡ **Framework**: Next.js
+🔷 **Language**: TypeScript
+🎨 **Styling**: Tailwind CSS
+📝 **Content**: ContentLayer with MDX
+🚀 **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## Content Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` - Next.js app directory with page components
+- `components/` - Reusable React components
+- `content/blog/` - MDX blog posts
+- `public/` - Static assets
+- `styles/` - Global styles
+- `lib/` - Utility functions and shared code
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding New Content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Blog Posts
 
-## Deploy on Vercel
+Add new MDX files to the `content/blog/` directory with the following frontmatter:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```md
+---
+title: Post Title
+date: YYYY-MM-DD
+description: Brief description of the post
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Content...
+```
