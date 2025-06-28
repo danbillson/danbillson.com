@@ -20,6 +20,20 @@ export default function Projects() {
 
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <a href="https://yonder-experiences.vercel.app/">
+            Yonder Experiences
+          </a>
+        </h2>
+        <p>
+          A simple app to visualise the value of points for different
+          experiences for the yonder credit card. Opens up a bit of a playground
+          for data visualisation with the use of recharts to show the value £
+          per 1000 points. Lets you know when is a good time to bulk buy
+          granola.
+        </p>
+
+        <hr className="my-6 border-neutral-100" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
           <a href="https://github.com/danbillson/next-forge-paddle">
             next-forge-paddle
           </a>
