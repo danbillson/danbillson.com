@@ -27,9 +27,11 @@ export default function Projects() {
         <p>
           A simple app to visualise the value of points for different
           experiences for the yonder credit card. Opens up a bit of a playground
-          for data visualisation with the use of recharts to show the value £
-          per 1000 points. Lets you know when is a good time to bulk buy
-          granola.
+          for data visualisation with the use of recharts to show the value in £
+          per 1000 points.{" "}
+          <span className="italic">
+            Lets you know when is a good time to bulk buy granola.
+          </span>
         </p>
 
         <hr className="my-6 border-neutral-100" />
