@@ -19,9 +19,7 @@ export default function Blog() {
     <div>
       <h1 className="font-medium text-2xl mt-14 mb-8 tracking-tighter">blog</h1>
 
-      <Section>
-        <BlogPosts posts={posts} />
-      </Section>
+      <BlogPosts posts={posts} />
     </div>
   );
 }

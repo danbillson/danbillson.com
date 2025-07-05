@@ -16,9 +16,16 @@ export default function Home() {
       <Section>
         <div className="prose prose-neutral">
           <p>
-            I&apos;m a software engineer, currently based in London. I was a
-            cheerleader on Team England but have now moved over to volleyball,
-            I&apos;m also a big fan of craft beer and coffee.
+            Software engineer at{" "}
+            <a
+              href="https://paddle.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Paddle
+            </a>{" "}
+            in London. Ex-cheerleader on Team England, now hits volleyballs. Big
+            fan of craft beer and coffee.
           </p>
         </div>
       </Section>

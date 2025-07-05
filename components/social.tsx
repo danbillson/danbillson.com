@@ -26,7 +26,7 @@ const social = [
 
 export default function Social() {
   return (
-    <Section className="flex justify-center m-6 gap-3 mt-12 print:hidden">
+    <div className="flex justify-center m-6 gap-3 mt-12 print:hidden">
       {social.map(({ icon, link }) => (
         <a
           key={link}
@@ -37,6 +37,6 @@ export default function Social() {
           className="w-6 h-6 mx-2"
         />
       ))}
-    </Section>
+    </div>
   );
 }
