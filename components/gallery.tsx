@@ -1,10 +1,10 @@
 "use client";
 
-import balcony from "../public/balcony.jpg";
-import beerFest from "../public/beer-fest.jpg";
 import cupie from "../public/cupie.jpg";
-import spw from "../public/spw.jpg";
+import light from "../public/light.jpg";
+import mikkeller from "../public/mikkeller.jpg";
 import te from "../public/te.jpg";
+import walking from "../public/walking.jpg";
 import { InView } from "@/components/ui/in-view";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -51,15 +51,15 @@ export default function Gallery() {
 
 const images = [
   {
-    src: beerFest,
-    alt: "Dan at a beer festival",
+    src: walking,
+    alt: "Dan walking in at the Paddle office",
     width: 500,
     height: 675,
     className: "row-span-3",
   },
   {
-    src: spw,
-    alt: "Dan at SoPost week",
+    src: mikkeller,
+    alt: "Dan at Mikkeller bar in Copenhagen",
     width: 500,
     height: 500,
     className: "row-span-2",
@@ -72,10 +72,10 @@ const images = [
     className: "row-span-3",
   },
   {
-    src: balcony,
-    alt: "Dan on a balcony smiling",
+    src: light,
+    alt: "Dan under a beam of light",
     width: 500,
-    height: 675,
+    height: 500,
     className: "row-span-2",
   },
   {
