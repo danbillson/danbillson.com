@@ -17,23 +17,25 @@ export default function Work() {
           to focus on creating a great developer experience, knowledge sharing
           and getting my team aligned.
         </p>
-
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
           <a href="https://www.paddle.com">Paddle</a>
         </h2>
         <p className="text-neutral-600 text-sm">Software Engineer, current</p>
         <p>
-          After a move to London, I joined the Developer Experience team at
-          Paddle where I lead the homepage refresh project for our{" "}
-          <a href="https://developer.paddle.com/">developer docs</a>. I work
-          closely with our open source projects including the{" "}
-          <a href="https://github.com/PaddleHQ/paddle-node-sdk">node sdk</a>,{" "}
-          <a href="https://github.com/PaddleHQ/paddle-js-v2">paddle.js</a> and
-          the{" "}
-          <a href="https://github.com/PaddleHQ/paddle-nextjs-starter-kit">
-            next.js starter kit
+          After moving to London, I joined Paddle’s Developer Experience team. I
+          led the homepage refresh for our{" "}
+          <a href="https://developer.paddle.com/">developer docs</a>, helped
+          build our design system, and maintained our open source projects. I
+          wrote the Paddle Billing migration guide for{" "}
+          <a href="https://www.next-forge.com/migrations/payments/paddle">
+            next-forge
+          </a>{" "}
+          and built the{" "}
+          <a href="https://github.com/PaddleHQ/paddle-mcp-server/tree/main">
+            Paddle MCP server
           </a>
+          .
         </p>
 
         <hr className="my-6 border-neutral-100" />
@@ -66,7 +68,6 @@ export default function Work() {
             of concept through to complete project.
           </li>
         </ul>
-
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
           <a href="https://precisionproco.co.uk/">Climb Creative</a>
@@ -85,7 +86,6 @@ export default function Work() {
           the rebuild of the product page and checkout flow, as well as
           implementing the Canva integration for custom product design.
         </p>
-
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
           <a href="https://www.wearemarmalade.co.uk/">Marmalade</a>
@@ -103,13 +103,12 @@ export default function Work() {
           I built the{" "}
           <a href="https://www.wearemarmalade.co.uk/driver-hub">
             Driver Hub Blog
-          </a>
+          </a>{" "}
           using Gatsby and headless Drupal. I also developed automated testing
           scripts using puppeteer to run concurrent quote checks across
           aggregators like Moneysupermarket and Compare the Market, testing over
           100 quotes simultaneously.
         </p>
-
         <hr className="my-6 border-neutral-100" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
           <a href="https://www.thg.com/">THG</a>
