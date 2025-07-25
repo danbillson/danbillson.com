@@ -78,7 +78,7 @@ export function MoodBoard() {
               key={selectedMood.title}
               ref={ref}
               layoutId={`mood-container-${selectedMood.title}`}
-              className="p-4 rounded-lg bg-background shadow-lg max-w-[632px] max-h-[75vh] overflow-y-auto"
+              className="p-4 rounded-lg bg-background shadow-lg max-w-[632px] max-h-[75vh] lg:max-h-[90vh] overflow-y-auto"
             >
               <motion.span
                 layoutId={`mood-index-${selectedMood.title}`}
