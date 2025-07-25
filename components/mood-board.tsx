@@ -1,6 +1,7 @@
 "use client";
 
-import { Kbd } from "./ui/kbd";
+import { InView } from "@/components/ui/in-view";
+import { Kbd } from "@/components/ui/kbd";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -137,41 +138,60 @@ export function MoodBoard() {
         </div>
       </div>
 
-      <ol className="w-full max-w-[100rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 xl:grid-cols-4 sm:gap-y-20 md:gap-y-32 xl:gap-y-40 mx-auto">
-        {moods.map((mood, index) => (
-          <motion.li
-            key={mood.title}
-            layoutId={`mood-container-${mood.title}`}
-            className="w-full cursor-pointer h-fit bg-background"
-            onClick={() => setSelectedMoodIndex(index)}
-          >
-            <motion.span
-              layoutId={`mood-index-${mood.title}`}
-              className="text-lg font-bold"
+      <InView
+        viewOptions={{ once: true, margin: "0px 0px -250px 0px" }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.09,
+            },
+          },
+        }}
+      >
+        <ol className="w-full max-w-[100rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 xl:grid-cols-4 sm:gap-y-20 md:gap-y-32 xl:gap-y-40 mx-auto">
+          {moods.map((mood, index) => (
+            <motion.li
+              key={mood.title}
+              layoutId={`mood-container-${mood.title}`}
+              className="w-full cursor-pointer h-fit bg-background"
+              onClick={() => setSelectedMoodIndex(index)}
+              variants={variants}
             >
-              {String(index + 1).padStart(2, "0")}
-            </motion.span>
-            <motion.div layoutId={`mood-image-${mood.title}`}>
-              <Image
-                src={mood.image}
-                alt={mood.title}
-                width={mood.width}
-                height={mood.height}
-                className="rounded-lg"
-              />
-            </motion.div>
-            <motion.h3
-              layoutId={`mood-title-${mood.title}`}
-              className="font-bold"
-            >
-              {mood.title}
-            </motion.h3>
-          </motion.li>
-        ))}
-      </ol>
+              <motion.span
+                layoutId={`mood-index-${mood.title}`}
+                className="text-lg font-bold"
+              >
+                {String(index + 1).padStart(2, "0")}
+              </motion.span>
+              <motion.div layoutId={`mood-image-${mood.title}`}>
+                <Image
+                  src={mood.image}
+                  alt={mood.title}
+                  width={mood.width}
+                  height={mood.height}
+                  className="rounded-lg"
+                />
+              </motion.div>
+              <motion.h3
+                layoutId={`mood-title-${mood.title}`}
+                className="font-bold"
+              >
+                {mood.title}
+              </motion.h3>
+            </motion.li>
+          ))}
+        </ol>
+      </InView>
     </>
   );
 }
+
+const variants = {
+  hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+  visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+} as const;
 
 const moods = [
   {
