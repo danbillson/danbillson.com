@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, AnimatePresence } from "motion/react";
+import { Kbd } from "./ui/kbd";
+import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useOnClickOutside } from "usehooks-ts";
@@ -9,18 +10,51 @@ export function MoodBoard() {
   const [selectedMoodIndex, setSelectedMoodIndex] = useState<number | null>(
     null,
   );
+  const [lastMoodIndex, setLastMoodIndex] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>(null);
-  useOnClickOutside(ref, () => setSelectedMoodIndex(null));
+
+  function closeModal() {
+    setSelectedMoodIndex(null);
+  }
+
+  function previousMood() {
+    if (selectedMoodIndex === null) {
+      setSelectedMoodIndex(lastMoodIndex ?? moods.length - 1);
+      return;
+    }
+    setSelectedMoodIndex(selectedMoodIndex - 1);
+  }
+
+  function nextMood() {
+    if (selectedMoodIndex === null) {
+      setSelectedMoodIndex(lastMoodIndex ?? 0);
+      return;
+    }
+    setSelectedMoodIndex(selectedMoodIndex + 1);
+  }
+
+  useOnClickOutside(ref, closeModal);
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        setSelectedMoodIndex(null);
+        closeModal();
+      }
+      if (event.key === "ArrowLeft") {
+        previousMood();
+      }
+      if (event.key === "ArrowRight") {
+        nextMood();
       }
     }
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
+  }, [selectedMoodIndex]);
+  useEffect(() => {
+    if (selectedMoodIndex !== null) {
+      setLastMoodIndex(selectedMoodIndex);
+    }
+  }, [selectedMoodIndex]);
 
   const selectedMood =
     selectedMoodIndex !== null ? moods[selectedMoodIndex] : null;
@@ -30,7 +64,7 @@ export function MoodBoard() {
       <AnimatePresence>
         {selectedMood && (
           <motion.div
-            className="fixed inset-0 grid place-items-center w-screen h-screen bg-black/50 z-10 backdrop-blur-sm"
+            className="fixed inset-0 w-screen h-screen bg-black/50 z-10 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -41,6 +75,7 @@ export function MoodBoard() {
         {selectedMood && (
           <div className="fixed inset-0 grid place-items-center p-8 w-screen h-screen z-50">
             <motion.div
+              key={selectedMood.title}
               ref={ref}
               layoutId={`mood-container-${selectedMood.title}`}
               className="p-4 rounded-lg bg-background shadow-lg max-w-[632px] max-h-[75vh] overflow-y-auto"
@@ -87,6 +122,22 @@ export function MoodBoard() {
           </div>
         )}
       </AnimatePresence>
+
+      <div className="w-full max-w-2xl mx-auto  px-6">
+        <div className="flex flex-col items-end gap-2 text-xs text-muted-foreground">
+          <p className="text-foreground">Shortcuts</p>
+          <span className="flex items-center gap-2" onClick={previousMood}>
+            Previous <Kbd>←</Kbd>
+          </span>
+          <span className="flex items-center gap-2" onClick={nextMood}>
+            Next <Kbd>→</Kbd>
+          </span>
+          <span className="flex items-center gap-2" onClick={closeModal}>
+            Close <Kbd>Esc</Kbd>
+          </span>
+        </div>
+      </div>
+
       <ol className="w-full max-w-[100rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 xl:grid-cols-4 sm:gap-y-20 md:gap-y-32 xl:gap-y-40 mx-auto">
         {moods.map((mood, index) => (
           <motion.li

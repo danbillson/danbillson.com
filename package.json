@@ -26,6 +26,7 @@
     "simple-icons": "^12.2.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "ts-key-enum": "^3.0.13",
     "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
