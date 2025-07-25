@@ -106,7 +106,6 @@ export function MoodBoard() {
                 {selectedMood.title}
               </motion.h3>
               <motion.p
-                layoutId={`mood-description-${selectedMood.title}`}
                 className="text-sm -mt-4"
                 initial={{ opacity: 0, filter: "blur(4px)" }}
                 animate={{ opacity: 1, filter: "blur(0px)" }}
