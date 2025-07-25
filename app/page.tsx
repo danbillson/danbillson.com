@@ -4,6 +4,7 @@ import { Title } from "@/components/title";
 import { Section } from "@/components/ui/section";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
+import Link from "next/link";
 
 export default function Home() {
   const latestPosts = allPosts
@@ -16,7 +17,7 @@ export default function Home() {
       <Section>
         <div className="prose prose-neutral">
           <p>
-            Software engineer at{" "}
+            Design engineer in London, working at{" "}
             <a
               href="https://paddle.com"
               target="_blank"
@@ -24,8 +25,8 @@ export default function Home() {
             >
               Paddle
             </a>{" "}
-            in London. Ex-cheerleader on Team England, now hits volleyballs. Big
-            fan of craft beer and coffee.
+            . Ex-cheerleader on Team England, now playing volleyball. Big fan of
+            craft beer, coffee and <Link href="/mood">much more</Link>.
           </p>
         </div>
       </Section>
