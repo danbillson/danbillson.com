@@ -25,7 +25,7 @@ export function AnimatedCard1() {
         <p>
           I first sumbled across these mugs in Hens Teeth, Dublin where I had to
           grab a couple of them, and then I had the priveledge of visiting the
-          store in Copenhagen and couldn't resist grabbing another.
+          store in Copenhagen and couldn&apos;t resist grabbing another.
         </p>
       )}
     </div>
