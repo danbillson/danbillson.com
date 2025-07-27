@@ -1,4 +1,7 @@
 import { CVTitle } from "./cv-title";
+import { AnimatedCard1 } from "@/components/animating-height/example-1";
+import { AnimatedCard2 } from "@/components/animating-height/example-2";
+import { AnimatedCard3 } from "@/components/animating-height/example-3";
 import { Callout } from "@/components/callout";
 import { InfoLinks } from "@/components/info-links";
 import { MdxCard } from "@/components/mdx-card";
@@ -162,8 +165,11 @@ const components = {
   ),
   Callout,
   Card: MdxCard,
-  InfoLinks: InfoLinks,
-  CVTitle: CVTitle,
+  InfoLinks,
+  CVTitle,
+  AnimatedCard1,
+  AnimatedCard2,
+  AnimatedCard3,
 };
 
 interface MdxProps {
