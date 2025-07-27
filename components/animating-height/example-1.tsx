@@ -9,7 +9,13 @@ export function AnimatedCard1() {
 
   return (
     <div className="flex h-fit w-full max-w-sm flex-col gap-4 rounded-md p-4 shadow-md mx-auto">
-      <Image src="/mood/mug.jpg" alt="mugs" width={600} height={600} />
+      <Image
+        className="rounded-sm"
+        src="/mood/mug.jpg"
+        alt="mugs"
+        width={600}
+        height={600}
+      />
       <h1
         className="inline-flex cursor-pointer justify-between text-xl underline"
         onClick={() => setIsOpen(!isOpen)}
