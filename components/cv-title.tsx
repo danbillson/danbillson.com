@@ -7,8 +7,8 @@ export function CVTitle() {
       </div>
       <div className="flex flex-col text-right">
         <p>London</p>
-        <a className="underline" href="mailto:dbillson@outlook.com">
-          dbillson@outlook.com
+        <a className="underline" href="mailto:dan@dnbls.com">
+          dan@dnbls.com
         </a>
         <a className="underline" href="https://github.com/danbillson">
           github.com/danbillson
